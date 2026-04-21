@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.975 0.012 85);
+  --foreground: oklch(0.22 0.03 250);
+  --card: oklch(0.99 0.008 85);
+  --card-foreground: oklch(0.22 0.03 250);
+  --primary: oklch(0.5 0.18 25);
+  --primary-foreground: oklch(0.98 0.01 85);
+  --secondary: oklch(0.93 0.02 85);
+  --secondary-foreground: oklch(0.22 0.03 250);
+  --muted: oklch(0.93 0.02 85);
+  --muted-foreground: oklch(0.45 0.02 250);
+  --accent: oklch(0.78 0.13 75);
+  --accent-foreground: oklch(0.22 0.03 250);
+  --border: oklch(0.88 0.02 85);
+  --cream: oklch(0.975 0.012 85);
+  --navy: oklch(0.28 0.06 255);
+  --gold: oklch(0.78 0.13 75);
+  --gradient-warm: linear-gradient(135deg, oklch(0.5 0.18 25), oklch(0.42 0.16 20));
+  --shadow-warm: 0 20px 50px -20px color-mix(in oklab, oklch(0.5 0.18 25) 35%, transparent);
+  --shadow-soft: 0 10px 30px -15px color-mix(in oklab, oklch(0.28 0.06 255) 25%, transparent);
+}
+
+* { border-color: var(--border); }
+html, body { background-color: var(--background); color: var(--foreground); }
+body { font-family: "Inter", system-ui, sans-serif; -webkit-font-smoothing: antialiased; margin: 0; }
+h1, h2, h3, h4 { font-family: "Playfair Display", Georgia, serif; letter-spacing: -0.01em; }
+.font-display { font-family: "Playfair Display", Georgia, serif; }
+
+.bg-background { background-color: var(--background); }
+.bg-card { background-color: var(--card); }
+.bg-primary { background-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+.bg-secondary\/40 { background-color: color-mix(in oklab, var(--secondary) 40%, transparent); }
+.bg-secondary\/50 { background-color: color-mix(in oklab, var(--secondary) 50%, transparent); }
+.bg-secondary\/60 { background-color: color-mix(in oklab, var(--secondary) 60%, transparent); }
+.bg-background\/85 { background-color: color-mix(in oklab, var(--background) 85%, transparent); }
+.bg-navy { background-color: var(--navy); }
+.bg-cream { background-color: var(--cream); }
+.bg-accent { background-color: var(--accent); }
+.bg-accent\/20 { background-color: color-mix(in oklab, var(--accent) 20%, transparent); }
+.bg-accent\/30 { background-color: color-mix(in oklab, var(--accent) 30%, transparent); }
+.bg-primary\/10 { background-color: color-mix(in oklab, var(--primary) 10%, transparent); }
+.bg-cream\/5 { background-color: color-mix(in oklab, var(--cream) 5%, transparent); }
+.bg-cream\/10 { background-color: color-mix(in oklab, var(--cream) 10%, transparent); }
+.bg-cream\/15 { background-color: color-mix(in oklab, var(--cream) 15%, transparent); }
+.bg-cream\/20 { background-color: color-mix(in oklab, var(--cream) 20%, transparent); }
+
+.text-foreground { color: var(--foreground); }
+.text-foreground\/80 { color: color-mix(in oklab, var(--foreground) 80%, transparent); }
+.text-muted-foreground { color: var(--muted-foreground); }
+.text-primary { color: var(--primary); }
+.text-primary-foreground { color: var(--primary-foreground); }
+.text-primary-foreground\/85 { color: color-mix(in oklab, var(--primary-foreground) 85%, transparent); }
+.text-navy { color: var(--navy); }
+.text-cream { color: var(--cream); }
+.text-cream\/60 { color: color-mix(in oklab, var(--cream) 60%, transparent); }
+.text-cream\/75 { color: color-mix(in oklab, var(--cream) 75%, transparent); }
+.text-cream\/80 { color: color-mix(in oklab, var(--cream) 80%, transparent); }
+.text-cream\/85 { color: color-mix(in oklab, var(--cream) 85%, transparent); }
+.text-cream\/90 { color: color-mix(in oklab, var(--cream) 90%, transparent); }
+.text-accent { color: var(--accent); }
+.fill-accent { fill: var(--accent); }
+
+.border-border { border-color: var(--border); }
+.border-border\/60 { border-color: color-mix(in oklab, var(--border) 60%, transparent); }
+.border-cream\/10 { border-color: color-mix(in oklab, var(--cream) 10%, transparent); }
+.border-cream\/30 { border-color: color-mix(in oklab, var(--cream) 30%, transparent); }
+.border-cream\/40 { border-color: color-mix(in oklab, var(--cream) 40%, transparent); }
+.border-accent\/40 { border-color: color-mix(in oklab, var(--accent) 40%, transparent); }
+.border-primary\/30 { border-color: color-mix(in oklab, var(--primary) 30%, transparent); }
+
+.shadow-warm { box-shadow: var(--shadow-warm); }
+.shadow-soft { box-shadow: var(--shadow-soft); }
+
+.gradient-warm { background: var(--gradient-warm); }
+.hero-overlay { background: linear-gradient(to right, color-mix(in oklab, var(--navy) 85%, transparent), color-mix(in oklab, var(--navy) 65%, transparent), color-mix(in oklab, var(--navy) 30%, transparent)); }
+
+a { text-decoration: none; color: inherit; }
+.hover\:text-primary:hover { color: var(--primary); }
+.hover\:text-accent:hover { color: var(--accent); }
+.hover\:bg-primary\/90:hover { background-color: color-mix(in oklab, var(--primary) 90%, transparent); }
+.hover\:bg-accent:hover { background-color: var(--accent); }
+.hover\:bg-cream\/20:hover { background-color: color-mix(in oklab, var(--cream) 20%, transparent); }
+.hover\:bg-secondary:hover { background-color: var(--secondary); }
+.hover\:underline:hover { text-decoration: underline; }
+.hover\:scale-105:hover { transform: scale(1.05); }
+.hover\:-translate-y-1:hover { transform: translateY(-0.25rem); }
+.hover\:border-primary\/30:hover { border-color: color-mix(in oklab, var(--primary) 30%, transparent); }
+.transition-transform { transition: transform .2s; }
+.transition-colors { transition: background-color .2s, color .2s, border-color .2s; }
+.transition-all { transition: all .2s; }
+
+.backdrop-blur { backdrop-filter: blur(8px); }
+
+/* mobile menu */
+.mobile-menu { display: none; }
+.mobile-menu.open { display: block; }
+@media (min-width: 768px) {
+  .mobile-toggle { display: none; }
+}
